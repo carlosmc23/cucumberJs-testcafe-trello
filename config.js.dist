@@ -1,0 +1,15 @@
+export default {
+    baseUrl: 'https://trello.com/login',
+    accounts: [
+        {
+            user: 'user1',
+            username: '',
+            password: ''
+        },
+        {
+            user: 'user2',
+            username: '',
+            password: ''
+        }
+    ]
+}

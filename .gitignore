@@ -1,0 +1,15 @@
+# Generated files
+.vscode/
+
+# Json
+config.js
+
+# node
+node_modules/
+
+# Reports
+reports
+
+# temporal files
+test.js
+cucumbertest.js
