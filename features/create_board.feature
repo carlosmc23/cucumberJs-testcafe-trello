@@ -12,22 +12,25 @@ Feature: Board
         Then I should have a board created with name "Supreme"
 
     @endToEnd
-    Scenario: Create a board, a list and a card
+    Scenario: Create (board, list, card), delete the board and logout of trello
         When I create a board with the following name "Great"
         And I create a list with the following name "In progress"
-        And I go to "Done" list
+        And I go to "In progress" list
         And I create a card with the following name "Improving tests"
         Then I shoud have items created with:
             | boardName | Great           |
             | listName  | In progress     |
             | cardName  | Improving tests |
+        And I delete the board permanently
+        And I log out of the trello application
+        And I should see the message "Thanks for using Trello."
 
 
     @endToEnd
-    Scenario: Create a board, a list and a card
+    Scenario: create a board, delete it and logout of trello
         When I create a board with the following name "Simple"
-        And I go to delete board in more menu
-        And I delete the board
+        Then I should have a board created with "Simple"
+        And I delete the board permanently
         And I log out of the trello application
-        Then I should see the message "Tanks for using Trello"
+        And I should see the message "Thanks for using Trello."
 

@@ -10,10 +10,10 @@ class HeaderPage {
         this.boardsMenuButton = selector('button[data-test-id="header-boards-menu-button"]');
     }
 
-    get selectors(){
-        return{
-            memberMenu : selector('button[aria-label="Open Member Menu"]')
-            .with({ boundTestRun: testController })
+    get selectors() {
+        return {
+            memberMenu: selector('button[aria-label="Open Member Menu"]')
+                .with({ boundTestRun: testController })
         };
     }
 
@@ -42,8 +42,12 @@ class HeaderPage {
         await testController.click(selector('a[title=' + boardName + ']'));
     }
 
-    async verifyMemberMenu(){
+    async verifyMemberMenu() {
         await testController.expect(this.selectors.memberMenu().exists).ok();
+    }
+
+    async goToMemberMenu() {
+        await testController.click(this.selectors.memberMenu);
     }
 }
 
