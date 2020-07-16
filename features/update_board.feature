@@ -6,7 +6,8 @@ Feature: Board
         Given I log with my trello account as "user1"
         And I create a board with the following name "News"
 
-    # @deleteBoard
+    @acceptance
     Scenario: Update a Board name
         When I update the board's name with "Past News"
-        Then "Past News" board should be updated
+        Then I should have a board updated with name "Past News"
+        

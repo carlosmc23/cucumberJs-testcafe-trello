@@ -24,7 +24,7 @@ When('I skip inviting members', async function () {
     await teamForm.addMembersLater();
 });
 
-Then('{string} team sould be visible', async function (name) {
+Then('I should have a team created with name {string}', async function (name) {
     await team.verifyTeamName(name);
     await cleanData.deteleTeam();
 });

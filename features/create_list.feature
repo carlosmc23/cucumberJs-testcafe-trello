@@ -6,7 +6,7 @@ Feature: List
         Given I log with my trello account as "user1"
         And I create a board with the following name "Chess"
 
-    # @deleteBoard
+    @acceptance
     Scenario:Create a list
         When I create a list with the following name "review"
-        Then The "review" list should be visible
+        Then I should have a list created with name "review" 

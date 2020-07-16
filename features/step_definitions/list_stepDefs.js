@@ -12,7 +12,7 @@ When('I create a list with the following name {string}', async function (name) {
     await listForm.submit();
 });
 
-Then('The {string} list should be visible', async function (name) {
+Then('I should have a list created with name {string}', async function (name) {
     await list.verifyListName(name);
     await cleanData.deleteBoard();
 });
