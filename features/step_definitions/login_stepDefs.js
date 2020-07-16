@@ -13,6 +13,14 @@ Given('I log with my trello account as {string}', async function (userType) {
     await login.submit();
 });
 
-Then('I should be logged', function () {
-    header.verifyMemberMenu();
+Then('I should be logged', async function () {
+    await header.verifyMemberMenu();
+});
+
+When('I log out of the trello application', async function(){
+
+});
+
+Then('I should see the message {string}', async function(message){
+
 });

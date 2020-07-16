@@ -7,7 +7,7 @@ Feature: Card
         And I create a board with the following name "LightBoard"
         And I create a list with the following name "Done"
 
-    # @deleteBoard
+    @acceptance
     Scenario:Create a card
         When I go to "Done" list
         And I create a card with the following name "Improving tests"

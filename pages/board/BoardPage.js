@@ -7,7 +7,7 @@ class BoardPage {
             boardName: selector('span[class*="js-board-editing-target"]')
                 .with({ boundTestRun: testController }),
             addListButton: selector('div.js-add-list span.icon-add'),
-            editBoardName: selector('div.board-header-btn.is-editing'),
+            editBoard: selector('div.board-header-btn.is-editing'),
         };
     }
 
@@ -22,7 +22,7 @@ class BoardPage {
     async editBoardName(name) {
         await testController
             .click(this.selectors.boardName)
-            .typeText(this.selectors.editBoardName, name)
+            .typeText(this.selectors.editBoard, name)
             .pressKey('enter');
     }
 }

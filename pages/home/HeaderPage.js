@@ -6,7 +6,7 @@ class HeaderPage {
         this.createMenuButton = selector('span[name = "add"]');
         this.createBoardButton = selector('button[data-test-id*="create-board-button"]');
         this.createTeamButton = selector('button[data-test-id="header-create-team-button"]');
-        this.houseButton = selector('span[name = "house"]');
+        this.homeButton = selector('span[name = "house"]');
         this.boardsMenuButton = selector('button[data-test-id="header-boards-menu-button"]');
     }
 
@@ -30,8 +30,8 @@ class HeaderPage {
         await testController.click(this.createTeamButton);
     }
 
-    async goToHouse() {
-        await testController.click(this.houseButton);
+    async goToHome() {
+        await testController.click(this.homeButton);
     }
 
     async goToBoardsMenu() {

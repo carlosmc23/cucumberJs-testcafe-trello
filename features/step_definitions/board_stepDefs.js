@@ -17,12 +17,22 @@ When('I create a board with the following name {string}', async function (boardN
     await boardForm.submit();
 });
 
-Then('{string} board should be (visible)(updated)', async function (expectedName) {
+Then('I should have a board (created)(updated) with name {string}', async function (expectedName) {
     await board.verifyBoardName(expectedName);
     await cleanData.deleteBoard();
 });
 
-When ('I update the board\'s name with {string}', async function(boardName){
-    await board.editBoardName(boardName);   
+When('I update the board\'s name with {string}', async function (boardName) {
+    await board.editBoardName(boardName);
 });
 
+Then('I shoud have items created with:', async function (data) {
+
+});
+
+When('I go to delete board in more menu', async function () {
+
+});
+When('I delete the board', async function () {
+
+});
