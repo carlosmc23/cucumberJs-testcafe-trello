@@ -8,7 +8,7 @@ Feature: Card
         And I create a list with the following name "Done"
 
     @acceptance
-    Scenario:Create a card
+    Scenario: User creates a card and verifies its name
         When I go to "Done" list
         And I create a card with the following name "Improving tests"
         Then I should have a card with the name "Improving tests"

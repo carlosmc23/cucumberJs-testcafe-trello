@@ -3,7 +3,7 @@ Feature: Board
     The user should be able to create a personal board
     without any team
 
-    Background: Login in the page
+    Background: Login in trello page
         Given I log with my trello account as "user1"
 
     @acceptance @smoke
@@ -12,7 +12,7 @@ Feature: Board
         Then I should have a board created with name "Supreme"
 
     @endToEnd
-    Scenario: Create (board, list, card), delete the board and logout of trello
+    Scenario: User performs a full flow of acctions to create a card
         When I create a board with the following name "Great"
         And I create a list with the following name "In progress"
         And I go to "In progress" list
@@ -27,7 +27,7 @@ Feature: Board
 
 
     @endToEnd
-    Scenario: create a board, delete it and logout of trello
+    Scenario: User perform a full flow of acctions creating a board
         When I create a board with the following name "Simple"
         Then I should have a board created with "Simple"
         And I delete the board permanently
