@@ -7,6 +7,6 @@ Feature: List
         And I create a board with the following name "Chess"
 
     @acceptance
-    Scenario:Create a list
+    Scenario: User creates a list and verifies its name
         When I create a list with the following name "review"
         Then I should have a list created with name "review" 

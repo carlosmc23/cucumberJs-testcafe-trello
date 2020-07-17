@@ -7,7 +7,7 @@ Feature: Board
         And I create a board with the following name "News"
 
     @acceptance
-    Scenario: Update a Board name
+    Scenario: User updates a Board name
         When I update the board's name with "Past News"
         Then I should have a board updated with name "Past News"
         
